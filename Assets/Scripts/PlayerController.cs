@@ -21,7 +21,8 @@ public class PlayerController : MonoBehaviour
     {
         // if not flagged
         rb.linearVelocity = Vector3.zero;
-        rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+        //rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+        rb.linearVelocity = new Vector3(0, _jumpForce, 0);
         Debug.Log("Me is colliding!!!!");
     }
 

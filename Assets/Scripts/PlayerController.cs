@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]     // ensures rigidbody2d always exists
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
     [SerializeField] private float _jumpForce = 10f;
     [SerializeField] float verticalSpeed = 3;
     private Rigidbody rb;
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
         rb = GetComponent<Rigidbody>();
         box = GetComponent<BoxCollider>();
     }

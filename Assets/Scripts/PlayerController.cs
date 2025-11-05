@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _jumpForce = 10f;
     [SerializeField] float verticalSpeed = 3;
     private Rigidbody rb;
-    BoxCollider box;
+    private BoxCollider box;
 
     void Awake()
     {

@@ -16,10 +16,15 @@ public class PlatformManager : MonoBehaviour
 
     //Schwierigkeit --> wie groß Distanz der Plattformen minimal sein muss + wie viele Platformen max. in Game Zonegespawnt werden dürfen + Menge an Upgrades pro 50m
 
-    //Arten von Platformen --> in einem Object Pool
+    //Arten von Platformen --> in einem Object Pool         (PowerUps separater Pool oder Instantiated?)
+        //- moving Platforms x-Achse (maybe auch y, oder x&y)
+        //- one-time use platforms
+        //- bouncy (jump higher) platforms
+        //- normal platforms
+
 
     //wenn Y-Koordinate <= 100 --> nur 100% normale Plattformen & Schwierigkeit gering
-    //wenn Y-Koord. <= 200 erreicht --> 20% bewegende Plattformen + 68ß% normale Plattformen
+    //wenn Y-Koord. <= 200 erreicht --> 20% bewegende Plattformen + 80% normale Plattformen
     //wenn Y <= 
 
 

@@ -35,6 +35,7 @@ public class GameZone : MonoBehaviour
     void Update()
     {
         CheckPlayerBoundary(PlayerController.instance.transform.position.x);
+        CheckGameOver(PlayerController.instance.transform.position.y);
         
     }
     
@@ -54,5 +55,14 @@ public class GameZone : MonoBehaviour
 
     }
 
-    //
+    void CheckGameOver(float playerPosition)
+    {
+        //Debug.Log(playerPosition);
+        if (this.transform.position.y - height/2 > playerPosition)
+        {
+            PlayerController.instance.isAlive = false;
+            Debug.Log("Game OVER");
+        }
+
+    }
 }

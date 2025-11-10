@@ -547,6 +547,9 @@ MonoBehaviour:
   - tag: standard
     prefab: {fileID: 1305977942}
     size: 20
+  - tag: moving
+    prefab: {fileID: 1305977942}
+    size: 20
 --- !u!4 &575465907
 Transform:
   m_ObjectHideFlags: 0
@@ -989,7 +992,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.69, y: 1.41, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.02, y: 1.8942046, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1034,7 +1037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jumpForce: 10
-  verticalSpeed: 3
+  verticalSpeed: 6
+  isAlive: 1
 --- !u!1 &1305977942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4406e391e6309774c99de2ae2ab51d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0.02
 --- !u!64 &2059434733
 MeshCollider:
   m_ObjectHideFlags: 0

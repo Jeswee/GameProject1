@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float verticalSpeed = 3;
     private Rigidbody rb;
     private BoxCollider box;
+    public bool isAlive = true;
 
     void Awake()
     {
@@ -20,11 +21,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        // if not flagged
-        rb.linearVelocity = Vector3.zero;
-        //rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
-        rb.linearVelocity += new Vector3(0, _jumpForce, 0);
-        Debug.Log("Me is colliding!!!!");
+            // if not flagged
+            rb.linearVelocity = Vector3.zero;
+            //rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+            rb.linearVelocity += new Vector3(0, _jumpForce, 0);
+            Debug.Log("Me is colliding!!!!");
     }
 
     void OnCollisionExit(Collision collision)
@@ -35,24 +36,26 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            rb.linearVelocity = new Vector3(verticalSpeed, rb.linearVelocity.y, 0);
-        }
-        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            rb.linearVelocity = new Vector3(-verticalSpeed, rb.linearVelocity.y, 0);
-        }
-        else
-        {
-            rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
-        }
-       
+        if(isAlive){
+
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            {
+                rb.linearVelocity = new Vector3(verticalSpeed, rb.linearVelocity.y, 0);
+            }
+            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                rb.linearVelocity = new Vector3(-verticalSpeed, rb.linearVelocity.y, 0);
+            }
+            else
+            {
+                rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+            }
+       }
     }
 
     void FixedUpdate()
     {
-        if (rb.linearVelocity.y <= 0)
+        if (rb.linearVelocity.y <= 0 && isAlive)
         {
             box.enabled = true;
         }

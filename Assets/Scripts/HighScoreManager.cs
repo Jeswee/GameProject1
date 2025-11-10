@@ -7,7 +7,7 @@ public class HighScoreManager : MonoBehaviour
 
     void Start()
     {
-        highscore = PlayerPrefs.GetInt("HighScore", 0);     //default = 0
+        highscore = PlayerPrefs.GetInt("HighScore");
         score = 0;
     }
 
@@ -23,6 +23,7 @@ public class HighScoreManager : MonoBehaviour
         if (score > highscore)
         {
             highscore = score;
+            PlayerPrefs.SetInt("Highscore", highscore);
         }
         Debug.Log(score + "...." + highscore);
     }

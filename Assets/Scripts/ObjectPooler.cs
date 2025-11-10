@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour
 {
+
+    public static ObjectPooler instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [System.Serializable]
     public class Pool
@@ -17,6 +19,7 @@ public class ObjectPooler : MonoBehaviour
 
     void Start()
     {
+        instance = this;
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
         foreach (Pool pool in pools)

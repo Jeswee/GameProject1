@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         {
             box.enabled = false;
         }
-        Debug.Log(rb.linearVelocity.y);
+        //Debug.Log(rb.linearVelocity.y);
 
         
 

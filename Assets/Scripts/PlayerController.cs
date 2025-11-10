@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private BoxCollider box;
     public bool isAlive = true;
-    [SerializeField] public float gravity;        //maybe better in difficulty manager
+    [SerializeField] public float gravity; // = Physics.gravity.y;
 
     void Awake()
     {
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
-        Physics.gravity = new Vector3(0f, gravity, 0f);   //maybe better in difficulty manager
+        Physics.gravity = new Vector3(0f, gravity, 0f);
 
         if (isAlive)
         {

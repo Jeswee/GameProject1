@@ -13,17 +13,21 @@ public class PlayerController : MonoBehaviour
     public bool isAlive = true;
     [SerializeField] public float gravity; // = Physics.gravity.y;
 
+    private Animator animator;
+
     void Awake()
     {
         instance = this;
         rb = GetComponent<Rigidbody>();
         box = GetComponent<BoxCollider>();
-
+        animator = GetComponent<Animator>();
     }
 
 
     private void OnCollisionEnter(Collision other)
     {
+        animator.SetTrigger("collided");
+        
         // if not flagged
         rb.linearVelocity = Vector3.zero;
         //rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);

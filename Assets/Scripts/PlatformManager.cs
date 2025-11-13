@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlatformManager : MonoBehaviour
 {
 
+    [SerializeField]
     Transform lastPlatform;       //die letzte generierte Platform --> zum vergleich, wo nächste gespawnt werden soll
     float currentHeight = 0;
     float ZoneOffset = 4;
@@ -12,7 +13,7 @@ public class PlatformManager : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -37,10 +38,12 @@ public class PlatformManager : MonoBehaviour
     
     void PlacePlatform()
     {
-        if (lastPlatform.position.y < GameZone.instance.transform.position.y + GameZone.instance.height / 2 + ZoneOffset) return;
+        if (lastPlatform.position.y > GameZone.instance.transform.position.y + GameZone.instance.height / 2 + ZoneOffset) return;
 
         currentHeight = currentHeight + GetRandomY(minY, maxY);
-        ObjectPooler.instance.SpawnFromPool("standard", new Vector3(GetRandomX(), currentHeight, 0), Quaternion.identity);
+        GameObject currentPlatform = ObjectPooler.instance.SpawnFromPool("standard", new Vector3(GetRandomX(), currentHeight, 0), Quaternion.identity);
+
+        lastPlatform = currentPlatform.transform;
 
         PlacePlatform();
     }

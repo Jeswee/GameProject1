@@ -2,7 +2,14 @@ using UnityEngine;
 
 public class PlatformManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    Transform lastPlatform;       //die letzte generierte Platform --> zum vergleich, wo nächste gespawnt werden soll
+    float currentHeight = 0;
+    float ZoneOffset = 4;
+    float minY = 1;
+    float maxY = 4;
+    
+
     void Start()
     {
 
@@ -11,7 +18,31 @@ public class PlatformManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlacePlatform();
+    }
 
+
+    float GetRandomY(float min, float max)
+    {
+        float y = Random.Range(min, max);
+        return y;
+    }
+    float GetRandomX()
+    {
+        float x = Random.Range(-(GameZone.instance.width / 2), GameZone.instance.width / 2);
+
+        return x;
+    }
+    
+    
+    void PlacePlatform()
+    {
+        if (lastPlatform.position.y < GameZone.instance.transform.position.y + GameZone.instance.height / 2 + ZoneOffset) return;
+
+        currentHeight = currentHeight + GetRandomY(minY, maxY);
+        ObjectPooler.instance.SpawnFromPool("standard", new Vector3(GetRandomX(), currentHeight, 0), Quaternion.identity);
+
+        PlacePlatform();
     }
 
     //Schwierigkeit --> wie groß Distanz der Plattformen minimal sein muss + wie viele Platformen max. in Game Zonegespawnt werden dürfen + Menge an Upgrades pro 50m
@@ -35,6 +66,9 @@ public class PlatformManager : MonoBehaviour
             // x-Achse --> zufälliger Wert zwischen GameZone.width/2 & -GameZone.width/2
             // y-Achse --> zufälliger Wert zwischen desiredJumpHeight & mindestAbstandFürPlattformSpawn
 
-            //wenn unterhalb von GameZone.transform.position - GameZone.height/2  --> dann despawn
+            //wenn unterhalb von GameZone.transform.position - GameZone.height/2 + offset  --> dann despawn
+
+            // wenn letzte gespawnte Plattform.y < gameZone.y + gameZone.height/2 + offset
+            // zu Start() --> letzte PLatform = Boden
 
 }

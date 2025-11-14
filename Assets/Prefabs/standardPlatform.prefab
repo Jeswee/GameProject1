@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1699415233234205893}
   - component: {fileID: 3384791359603407395}
+  - component: {fileID: 6341491473265125773}
   m_Layer: 0
   m_Name: standardPlatform
   m_TagString: standardP
@@ -56,6 +57,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5, y: 0.3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6341491473265125773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3012971642419970369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20d6507562cb124d831af25c287df65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredJumpHeight: 0
+  snow: {fileID: 3712620706368657616}
 --- !u!1 &3386447073417580431
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +170,7 @@ GameObject:
   - component: {fileID: 6593437963144153339}
   m_Layer: 0
   m_Name: snow
-  m_TagString: Untagged
+  m_TagString: snow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -43,6 +43,8 @@ public class PlatformManager : MonoBehaviour
         currentHeight = currentHeight + GetRandomY(minY, maxY);
         GameObject currentPlatform = ObjectPooler.instance.SpawnFromPool("standard", new Vector3(GetRandomX(), currentHeight, 0), Quaternion.identity);
 
+        currentPlatform.GetComponent<Platform>()?.onSpawn();
+
         lastPlatform = currentPlatform.transform;     
  
         PlacePlatform();

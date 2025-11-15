@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
     //[SerializeField] private float _jumpForce = 10f;
-    [SerializeField] private float desiredJumpHeight = 4f;
+    [SerializeField] public float desiredJumpHeight = 4f;
     [SerializeField] float verticalSpeed = 6;
     private Rigidbody rb;
     private BoxCollider box;

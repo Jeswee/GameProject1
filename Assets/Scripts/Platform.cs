@@ -11,7 +11,7 @@ public class Platform : MonoBehaviour
 
     void Awake()
     {
-        
+        desiredJumpHeight = PlayerController.instance.desiredJumpHeight;
     }
 
     public void onSpawn()

@@ -1106,6 +1106,14 @@ PrefabInstance:
       propertyPath: desiredJumpHeight
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7147275752777404602, guid: 4397b79b50eace94197d3aedfedb9f1e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.058676884
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147275752777404602, guid: 4397b79b50eace94197d3aedfedb9f1e, type: 3}
+      propertyPath: m_Center.y
+      value: 0.06487
+      objectReference: {fileID: 0}
     - target: {fileID: 8975789626427521943, guid: 4397b79b50eace94197d3aedfedb9f1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.31

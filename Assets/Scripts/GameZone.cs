@@ -30,7 +30,7 @@ public class GameZone : MonoBehaviour
         //Scale anpassen (weil Plane 10x10)
         transform.localScale = new Vector3(width / 10f, 1f, height / 10f);
 
-        Debug.Log(width);
+        //Debug.Log(width);
     }
 
     void Update()

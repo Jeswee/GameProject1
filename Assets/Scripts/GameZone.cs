@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameZone : MonoBehaviour
 {
     public static GameZone instance;
-    Camera cam;
+    [SerializeField] Camera cam;
     public float width;
     public float height;
     [SerializeField] float offset;      //offset, damit er erst später rüberteleportiert und man noch ein wenig aus dem Screen raus kann
@@ -12,7 +12,6 @@ public class GameZone : MonoBehaviour
     void Awake()
     {
         instance = this;
-        cam = FindFirstObjectByType<Camera>();
         if (cam == null)
         {
             Debug.LogError("No camera found!");

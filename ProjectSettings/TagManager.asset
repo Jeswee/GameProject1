@@ -7,6 +7,7 @@ TagManager:
   - standardP
   - movingP
   - snow
+  - platform
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4280221361908947426}
   m_Layer: 0
   m_Name: movingPlatform
-  m_TagString: movingP
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28546e321ebc7c44d84285cf01f07ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desiredJumpHeight: 0
+  jumpMultiplier: 1
   snow: {fileID: 6487219786634649723}
   vel: 2
 --- !u!1 &6487219786634649723

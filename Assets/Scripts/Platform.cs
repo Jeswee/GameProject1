@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    public float desiredJumpHeight;
+    public float jumpMultiplier = 1;
     [SerializeField] GameObject snow;
 
 
@@ -11,7 +11,7 @@ public class Platform : MonoBehaviour
 
     void Awake()
     {
-        desiredJumpHeight = PlayerController.instance.desiredJumpHeight;
+        
     }
 
     public void onSpawn()
@@ -19,11 +19,11 @@ public class Platform : MonoBehaviour
         Region currentRegion = RegionManager.instance.currentRegion;
         if(currentRegion.regionType == RegionType.EARTH || currentRegion.regionType == RegionType.SKY)
         {
-            snow.SetActive(true);
+            snow?.SetActive(true);      //? = nur wenn Snow überhaupt vorhanden
         } 
         else
         {
-            snow.SetActive(false);
+            snow?.SetActive(false);
         }
     }
 }

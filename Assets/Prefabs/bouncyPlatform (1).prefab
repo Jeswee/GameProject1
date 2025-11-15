@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 480517810541333610}
   m_Layer: 0
   m_Name: bouncyPlatform (1)
-  m_TagString: standardP
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d903a97b7b37ae14e930daeaa8cad20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desiredJumpHeight: 20
+  jumpMultiplier: 3
   snow: {fileID: 4275165109928285012}
 --- !u!1001 &8348597445373101872
 PrefabInstance:
@@ -379,12 +379,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3864500985365950950, guid: 9c9c577e5c451fb4ea2349debf3703ef, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3864500985365950950, guid: 9c9c577e5c451fb4ea2349debf3703ef, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c93e17e8eeaa8464386c337174fd47ac, type: 2}
     - target: {fileID: 919132149155446097, guid: 9c9c577e5c451fb4ea2349debf3703ef, type: 3}
       propertyPath: m_Name
       value: bouncyPlatformRubberBand
+      objectReference: {fileID: 0}
+    - target: {fileID: 8877546096726144196, guid: 9c9c577e5c451fb4ea2349debf3703ef, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8877546096726144196, guid: 9c9c577e5c451fb4ea2349debf3703ef, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

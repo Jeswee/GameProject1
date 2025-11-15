@@ -11,6 +11,7 @@ public class HighScoreManager : MonoBehaviour
     void Start()
     {
         highscore = PlayerPrefs.GetInt("HighScore");
+        HighscoreText.text = highscore.ToString();
         score = 0;
         scoreText.text = "0";
     }
@@ -35,6 +36,7 @@ public class HighScoreManager : MonoBehaviour
         {
             highscore = score;
             PlayerPrefs.SetInt("Highscore", highscore);
+            HighscoreText.text = highscore.ToString();
         }
     }
 

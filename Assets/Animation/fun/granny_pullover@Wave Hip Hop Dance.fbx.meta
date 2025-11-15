@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 66b525a1298f12042999d96458ce8ee8
+guid: 9e208249bdfa0844f9a8e1ad7f9fa501
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,11 +31,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Breakdance Uprock
+      name: Wave Hip Hop Dance
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 50
+      lastFrame: 383
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

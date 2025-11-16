@@ -46,7 +46,7 @@ public class DifficultyManager : MonoBehaviour
 
     public static String getPlatformString()
     {
-            UpdatePercantages();
+            UpdatePercentages();
             
 
             //Debug.Log("standard:  " + standard + "    " + "moving:  " + moving);
@@ -62,7 +62,7 @@ public class DifficultyManager : MonoBehaviour
             return "standard";
     }
 
-    static void UpdatePercantages()
+    static void UpdatePercentages()
     {
         if(HighScoreManager.score % 20 != 0) return;
 

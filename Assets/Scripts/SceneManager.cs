@@ -7,7 +7,6 @@ public class SceneManager : MonoBehaviour
     
     public void StartGame()
     {
-        //GameManager.instance.switchGameState(GameState.RUNNING);
         Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
     }
@@ -22,7 +21,7 @@ public class SceneManager : MonoBehaviour
     {
         Time.timeScale = 1;
         
-        GameManager.instance.switchGameState(GameState.RUNNING);
+        GameManager.instance.switchGameState(GameState.INMENU);
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 
@@ -31,11 +30,4 @@ public class SceneManager : MonoBehaviour
         GameManager.instance.switchGameState(GameState.RUNNING);
     }
 
-    public void TryAgain()
-    {
-        Time.timeScale = 1;
-
-        GameManager.instance.switchGameState(GameState.RUNNING);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
-    }
 }

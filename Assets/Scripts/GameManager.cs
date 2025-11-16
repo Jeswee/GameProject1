@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        //switchGameState(GameState.RUNNING);
+        switchGameState(GameState.RUNNING);
         instance = this;
     }
 
@@ -42,26 +42,30 @@ public class GameManager : MonoBehaviour
         {
             case GameState.RUNNING : 
                 Time.timeScale = 1;
-                PlayerUI?.SetActive(true);
-                GameOverUI?.SetActive(false);
-                PauseUI?.SetActive(false);
+                if (PlayerUI != null) PlayerUI.SetActive(true);
+                if (GameOverUI != null) GameOverUI.SetActive(false);
+                if (PauseUI != null) PauseUI.SetActive(false);
                 
                 break;
             case GameState.PAUSED :
                 Time.timeScale = 0;
                 HighScoreManager.instance.UpdateScore();
-                PlayerUI?.SetActive(false);
-                GameOverUI?.SetActive(false);
-                PauseUI?.SetActive(true);
+                if (PlayerUI != null) PlayerUI.SetActive(false);
+                if (GameOverUI != null) GameOverUI.SetActive(false);
+                if (PauseUI != null) PauseUI.SetActive(true);
                 
                 break;
             case GameState.GAMEOVER :
                 Time.timeScale = 0;
                 HighScoreManager.instance?.UpdateScore();
-                PlayerUI?.SetActive(false);
-                GameOverUI?.SetActive(true);
-                PauseUI?.SetActive(false);
+                if (PlayerUI != null) PlayerUI.SetActive(false);
+                if (GameOverUI != null) GameOverUI.SetActive(true);
+                if (PauseUI != null) PauseUI.SetActive(false);
                 
+                break;
+            case GameState.INMENU :
+                Time.timeScale = 1;
+
                 break;
         }
     }

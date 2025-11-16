@@ -275,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3622058963925757657
 Transform:
   m_ObjectHideFlags: 0
@@ -330,6 +330,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpMultiplier: 3.5
   snow: {fileID: 4275165109928285012}
+  cartoonBoing:
+  - {fileID: 8300000, guid: 6dd80106299bdd44bb32ab0001bf8da5, type: 3}
+  - {fileID: 8300000, guid: c608fc6aee9298449ae05773065fe49e, type: 3}
+  - {fileID: 8300000, guid: 73572b7039725b84eacad3726084bf2b, type: 3}
 --- !u!1001 &8348597445373101872
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -242,3 +242,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpMultiplier: 1
   snow: {fileID: 0}
+  crushingIce:
+  - {fileID: 8300000, guid: 14bc74afaebb3b14e85c226c65759ea6, type: 3}

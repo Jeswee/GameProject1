@@ -3,9 +3,12 @@ using UnityEngine;
 
 public class SingleUsePlatform : Platform
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] AudioClip[] crushingIce;
+
     private void OnCollisionEnter(Collision other)
     {
+        SoundEffectsManager.instance.PlayRandomSoundEffect(crushingIce, this.transform, 1);
+
         if (other.collider.CompareTag("Player"))
         {
             this.gameObject.SetActive(false);

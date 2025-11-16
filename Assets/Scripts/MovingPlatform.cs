@@ -32,5 +32,7 @@ public class MovingPlatform : Platform
         }
 
         this.transform.position += new Vector3(vel* Time.deltaTime, 0, 0);
+
+        CheckDespawn();
     }
 }

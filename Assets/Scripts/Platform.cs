@@ -1,9 +1,11 @@
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
     public float jumpMultiplier = 1;
     [SerializeField] GameObject snow;
+    float offset = 0.2f;
 
 
     //Schnee an/ aus stellen --> Referenz auf RegionManager --> an Region anpassen  --> wenn Platform.y <= Region.min.Height --> switch Schnee
@@ -12,6 +14,11 @@ public class Platform : MonoBehaviour
     void Awake()
     {
         
+    }
+
+    void Update()
+    {
+        CheckDespawn();
     }
 
     public void onSpawn()
@@ -25,5 +32,14 @@ public class Platform : MonoBehaviour
         {
             snow?.SetActive(false);
         }
+    }
+
+    public void CheckDespawn()
+    {
+        if(this.transform.position.y < GameZone.instance.transform.position.y - GameZone.instance.height / 2 - offset)
+        {
+            gameObject.SetActive(false);
+        }
+        
     }
 }

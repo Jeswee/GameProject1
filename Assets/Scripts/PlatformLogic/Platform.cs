@@ -5,6 +5,7 @@ public class Platform : MonoBehaviour
 {
     public float jumpMultiplier = 1;
     [SerializeField] GameObject snow;
+    public AudioClip[] sfx;
     float offset = 0.2f;
 
 

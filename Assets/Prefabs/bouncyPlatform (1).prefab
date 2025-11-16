@@ -330,7 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpMultiplier: 3.5
   snow: {fileID: 4275165109928285012}
-  cartoonBoing:
+  sfx:
   - {fileID: 8300000, guid: 6dd80106299bdd44bb32ab0001bf8da5, type: 3}
   - {fileID: 8300000, guid: c608fc6aee9298449ae05773065fe49e, type: 3}
   - {fileID: 8300000, guid: 73572b7039725b84eacad3726084bf2b, type: 3}

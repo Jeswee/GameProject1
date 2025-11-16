@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
         if (other.collider.CompareTag("platform"))
         {
             jumpMultiplier = other.gameObject.GetComponent<Platform>().jumpMultiplier;
+            SoundEffectsManager.instance.PlayRandomSoundEffect(other.gameObject.GetComponent<Platform>().sfx, this.transform, 1);
         }
         
         // if not flagged

@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4819098805228636222
 Transform:
   m_ObjectHideFlags: 0
@@ -71,6 +71,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpMultiplier: 1
   snow: {fileID: 6487219786634649723}
+  sfx:
+  - {fileID: 8300000, guid: 6488f4f43a5e0f04091dbb3d1b234bf7, type: 3}
+  - {fileID: 8300000, guid: 6b9555c921f04834ca038f4ed166e223, type: 3}
   vel: 2
 --- !u!1 &6487219786634649723
 GameObject:

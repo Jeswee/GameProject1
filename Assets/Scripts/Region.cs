@@ -8,4 +8,5 @@ public class Region
     public bool snowActive;
     public Vector3 backgroundColor;
     public AudioClip music;
+    public Vector4 color;
 }

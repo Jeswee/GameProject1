@@ -20,6 +20,11 @@ public class RegionManager : MonoBehaviour
     [SerializeField] int regionSize = 250;
     public Region currentRegion;
 
+
+    //FARBWECHSEL AUF REGION SWITCH
+
+
+
     void Start()
     {
         instance = this;
@@ -34,7 +39,16 @@ public class RegionManager : MonoBehaviour
             level++;
             level = Math.Clamp(level, 0, 3);    //just to be sure :))
             currentRegion = regions[level];
+
+            //ColorLerp();
         }
+    }
+
+    // GameZone.instance.GetComponent<Material>().SetVector("_Color_A_Albedo", Vector)
+
+    void ColorLerp()
+    {
+        //TODO: Lerp between colors
     }
 
 }

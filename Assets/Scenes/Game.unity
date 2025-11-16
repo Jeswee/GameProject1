@@ -3820,21 +3820,25 @@ MonoBehaviour:
     snowActive: 1
     backgroundColor: {x: 0, y: 0, z: 0}
     music: {fileID: 8300000, guid: c2eb2f644b57249429b57119dafb7317, type: 3}
+    color: {x: 0.4, y: 1, z: 13, w: 0}
   - regionType: 1
     minHeight: 250
     snowActive: 1
     backgroundColor: {x: 0, y: 0, z: 0}
     music: {fileID: 8300000, guid: 941b91a56b63c2540b8f1f24ba238360, type: 3}
+    color: {x: 0.902, y: 0.651, z: 0.6, w: 0}
   - regionType: 2
     minHeight: 500
     snowActive: 0
     backgroundColor: {x: 0, y: 0, z: 0}
     music: {fileID: 8300000, guid: dcecf12bf93850b46b868ddc94e52e42, type: 3}
+    color: {x: 0.808, y: 0.608, z: 0.98, w: 0}
   - regionType: 3
     minHeight: 750
     snowActive: 0
     backgroundColor: {x: 0, y: 0, z: 0}
     music: {fileID: 0}
+    color: {x: 0.012, y: 0, z: 0.4, w: 0}
   regionSize: 250
   currentRegion:
     regionType: 0
@@ -3842,6 +3846,7 @@ MonoBehaviour:
     snowActive: 0
     backgroundColor: {x: 0, y: 0, z: 0}
     music: {fileID: 8300000, guid: 6b5df3d212817704b82628b9aad24a08, type: 3}
+    color: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3226895896953189627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3919,7 +3924,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4470664152518281132, guid: 4397b79b50eace94197d3aedfedb9f1e, type: 3}
       propertyPath: m_Name
-      value: granny
+      value: Lizzie
       objectReference: {fileID: 0}
     - target: {fileID: 8975789626427521943, guid: 4397b79b50eace94197d3aedfedb9f1e, type: 3}
       propertyPath: m_LocalPosition.x

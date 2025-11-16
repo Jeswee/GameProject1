@@ -60,6 +60,7 @@ public class GameZone : MonoBehaviour
     {
         //Debug.Log(playerPosition);
         if (this.transform.position.y - height/2 > playerPosition && GameManager.instance.gameState != GameState.GAMEOVER)
+        //if (this.transform.position.y - height/2 > playerPosition)
         {
             PlayerController.instance.isAlive = false;
             Debug.Log("Game OVER");

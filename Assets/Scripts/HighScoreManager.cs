@@ -1,13 +1,14 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class HighScoreManager : MonoBehaviour
 {
     public static HighScoreManager instance;
 
     //Keeps Track of Score & Highscore & uodates/ saves accordignly :)
-    public static int score;
-    public static int highscore;
+    public int score;
+    public int highscore;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI GameOverScoreText;
     [SerializeField] TextMeshProUGUI PauseMenuScoreText;
@@ -18,7 +19,7 @@ public class HighScoreManager : MonoBehaviour
     void Start()
     {
         instance = this;
-        highscore = PlayerPrefs.GetInt("HighScore");
+        highscore = PlayerPrefs.GetInt("Highscore", 0);
         HighscoreText.text = highscore.ToString();
         score = 0;
         scoreText.text = "0";
@@ -44,8 +45,16 @@ public class HighScoreManager : MonoBehaviour
         {
             highscore = score;
             PlayerPrefs.SetInt("Highscore", highscore);
+            PlayerPrefs.Save();
             HighscoreText.text = highscore.ToString();
         }
+
+        GameOverHighscoreText.text = highscore.ToString();
+        PauseMenuHighscoreText.text = highscore.ToString();
+        GameOverScoreText.text = score.ToString();
+        PauseMenuScoreText.text = score.ToString();
+
+        Debug.Log(PlayerPrefs.GetInt("Highscore"));
     }
 
 }

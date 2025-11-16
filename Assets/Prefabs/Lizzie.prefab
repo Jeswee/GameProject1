@@ -1530,7 +1530,7 @@ GameObject:
   - component: {fileID: 480210301539452502}
   - component: {fileID: 1940919929166711432}
   m_Layer: 0
-  m_Name: granny
+  m_Name: Lizzie
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

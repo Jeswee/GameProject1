@@ -64,7 +64,7 @@ public class DifficultyManager : MonoBehaviour
 
     static void UpdatePercentages()
     {
-        if(HighScoreManager.score % 20 != 0) return;
+        if(HighScoreManager.instance.score % 20 != 0) return;
 
         start = 0;
         standard = start + GetPercentage(100, 5, 1900, GameZone.instance.transform.position.y);

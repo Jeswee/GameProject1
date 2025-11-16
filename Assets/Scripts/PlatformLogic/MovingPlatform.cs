@@ -16,7 +16,7 @@ public class MovingPlatform : Platform
     // Update is called once per frame
     void Update()
     {
-        if (Math.Abs(this.transform.position.x) > Math.Abs(GameZone.instance.transform.position.x - GameZone.instance.width / 2))
+        if (Math.Abs(this.transform.position.x) >= Math.Abs(GameZone.instance.transform.position.x - GameZone.instance.width / 2))
         {
             switch (dir)
             {

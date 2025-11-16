@@ -69,7 +69,7 @@ public class DifficultyManager : MonoBehaviour
         start = 0;
         standard = start + GetPercentage(100, 5, 1900, GameZone.instance.transform.position.y);
         moving = standard + GetPercentage(0, 31, 1300, GameZone.instance.transform.position.y);
-        bouncy = moving + GetPercentage(0, 12, 700, GameZone.instance.transform.position.y);
-        singleUse = bouncy + GetPercentage(0, 42, 1900, GameZone.instance.transform.position.y);
+        bouncy = moving + GetPercentage(0, 9, 700, GameZone.instance.transform.position.y);
+        singleUse = bouncy + GetPercentage(0, 47, 1900, GameZone.instance.transform.position.y);
     }
 }

@@ -1025,7 +1025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b193b7812f40d248af9033234cb187b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameState: 0
+  gameState: 2
   PlayerUI: {fileID: 0}
   GameOverUI: {fileID: 0}
   PauseUI: {fileID: 0}

@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    void Start()
+    {
+        GameManager.instance.switchGameState(GameState.RUNNING);        //REMOVING BREAKS GAME ---- TODO: FIX MENU & RESTART
+    }
 
     private void OnCollisionEnter(Collision other)
     {

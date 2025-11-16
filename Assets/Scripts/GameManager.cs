@@ -12,11 +12,12 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         //switchGameState(GameState.RUNNING);
+        instance = this;
     }
 
     void Start()
     {
-        instance = this;
+        
         
     }
 

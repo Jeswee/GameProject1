@@ -36,6 +36,7 @@ public class Platform : MonoBehaviour
 
     public void CheckDespawn()
     {
+        if(GameZone.instance == null) return;
         if(this.transform.position.y < GameZone.instance.transform.position.y - GameZone.instance.height / 2 - offset)
         {
             gameObject.SetActive(false);

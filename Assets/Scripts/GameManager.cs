@@ -3,16 +3,21 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public GameState gameState = GameState.RUNNING;
+    public GameState gameState;
 
     [SerializeField] GameObject PlayerUI;
     [SerializeField] GameObject GameOverUI;
     [SerializeField] GameObject PauseUI;
 
+    void Awake()
+    {
+        //switchGameState(GameState.RUNNING);
+    }
 
     void Start()
     {
         instance = this;
+        
     }
 
     // Update is called once per frame
@@ -35,23 +40,28 @@ public class GameManager : MonoBehaviour
         switch (this.gameState)
         {
             case GameState.RUNNING : 
-                PlayerUI.SetActive(true);
-                GameOverUI.SetActive(false);
-                PauseUI.SetActive(false);
                 Time.timeScale = 1;
+                PlayerUI?.SetActive(true);
+                GameOverUI?.SetActive(false);
+                PauseUI?.SetActive(false);
+                
                 break;
             case GameState.PAUSED :
-                PlayerUI.SetActive(false);
-                GameOverUI.SetActive(false);
-                PauseUI.SetActive(true);
                 Time.timeScale = 0;
-                return;
+                HighScoreManager.instance.UpdateScore();
+                PlayerUI?.SetActive(false);
+                GameOverUI?.SetActive(false);
+                PauseUI?.SetActive(true);
+                
+                break;
             case GameState.GAMEOVER :
-                PlayerUI.SetActive(false);
-                GameOverUI.SetActive(true);
-                PauseUI.SetActive(false);
                 Time.timeScale = 0;
-                return;
+                HighScoreManager.instance?.UpdateScore();
+                PlayerUI?.SetActive(false);
+                GameOverUI?.SetActive(true);
+                PauseUI?.SetActive(false);
+                
+                break;
         }
     }
 }

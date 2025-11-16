@@ -996,6 +996,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537214986}
   m_CullTransparentMesh: 1
+--- !u!1 &1633942757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633942759}
+  - component: {fileID: 1633942758}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1633942758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633942757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b193b7812f40d248af9033234cb187b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameState: 0
+  PlayerUI: {fileID: 0}
+  GameOverUI: {fileID: 0}
+  PauseUI: {fileID: 0}
+--- !u!4 &1633942759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633942757}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.3027134, y: 11.266314, z: 0.5605067}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1693557725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +1055,6 @@ GameObject:
   - component: {fileID: 1693557726}
   - component: {fileID: 1693557729}
   - component: {fileID: 1693557728}
-  - component: {fileID: 1693557727}
   m_Layer: 5
   m_Name: Highscore
   m_TagString: Untagged
@@ -1034,19 +1081,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -191}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1693557727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693557725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a022e3eed57661478154e50284b1ad7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HighscoreText: {fileID: 1693557728}
 --- !u!114 &1693557728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5168,6 +5202,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 88563143}
   - {fileID: 2020292979}
+  - {fileID: 1633942759}
   - {fileID: 8577660614000236456}
   - {fileID: 1983777329}
   - {fileID: 1699415233427581085}

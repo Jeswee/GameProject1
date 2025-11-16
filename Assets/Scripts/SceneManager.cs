@@ -12,11 +12,13 @@ public class SceneManager : MonoBehaviour
 
     public void ExitGame()
     {
+        
         Application.Quit();
     }
 
     public void BackToMenu()
     {
+        GameManager.instance.switchGameState(GameState.RUNNING);
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 
@@ -28,5 +30,6 @@ public class SceneManager : MonoBehaviour
     public void TryAgain()
     {
         GameManager.instance.switchGameState(GameState.RUNNING);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
     }
 }

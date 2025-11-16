@@ -63,6 +63,8 @@ public class GameZone : MonoBehaviour
         {
             PlayerController.instance.isAlive = false;
             Debug.Log("Game OVER");
+
+            GameManager.instance.switchGameState(GameState.GAMEOVER);
         }
 
     }

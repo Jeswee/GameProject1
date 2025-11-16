@@ -32,10 +32,6 @@ public class MainMenuZone : MonoBehaviour
         //Debug.Log(width);
     }
 
-    void Update()
-    {
-        
-    }
     
 
 }
